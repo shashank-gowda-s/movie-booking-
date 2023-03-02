@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Movie Seat Booking</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    
-    <div>
-      <img class="main-logo" src="C:\Users\My PC\Desktop\Web project\images\logo.png"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Movie Seat Booking</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <img class="main-logo" src="C:\Users\My PC\Desktop\Web project\images\logo.png" />
+  </div>
+
+
+  <div class="movie-container">
+    <label style="font-size: 1em;">Pick a movie:</label>
+    <select id="movie">
+      <option value="236">PUSHPA:THE RISE 2022 -TELUGU(Rs.236)</option>
+      <option value="150">VIKRAM -TAMIL(Rs.150)</option>
+      <option value="236">KGF - Chapter 2 -KANNADA(2022) (RS.236)</option>
+      <option value="324"> RRR 2022-TELUGU (Rs.324)</option>
+      <option value="175">JALSA (Re-release)-TELUGU(2008) (Rs.175)</option>
+      <option value="235">Kantaraa-KANNADA(2022) (Rs.235)</option>
+    </select>
+  </div>
+  <div class="date-container">
+    <label style="font-size: 1em;">Pick a date:</label>
+    <input type="date" id="start" name="trip-start" value="2023-03-03" min="2023-03-03" max="2023-03-17">
+  </div>
+  <div class="time-container">
+    <label style="font-size: 1em;">Choose your timings:</label>
+    <select id="time" name="time">
+      <option value="">--Select Timings--</option>
+      <option value="10:00:00">10:00 AM</option>
+      <option value="01:30:00">01:30 PM</option>
+      <option value="04:30:00">04:30 PM</option>
+      <option value="07:30:00">07:30 PM</option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div id="seat" class="seat"></div>
+      <small class="status" style="font-size: 1em;">N/A</small>
+    </li>
+    <li>
+      <div id="seat" class="seat selected"></div>
+      <small class="status" style="font-size: 1em;">Selected</small>
+    </li>
+    <li>
+      <div id="seat" class="seat occupied"></div>
+      <small class="status" style="font-size: 1em;">Occupied</small>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="screen">
+      Your screen this way
     </div>
 
-     
-    <div class="movie-container">
-      <label style="font-size: 1em;">Pick a movie:</label>
-      <select id="movie">
-        <option value="236">PUSHPA:THE RISE 2022 -TELUGU(Rs.236)</option>
-        <option value="150">VIKRAM -TAMIL(Rs.150)</option>
-        <option value="236">KGF - Chapter 2 -KANNADA(2022) (RS.236)</option>
-        <option value="324"> RRR 2022-TELUGU (Rs.324)</option>
-        <option value="175">JALSA (Re-release)-TELUGU(2008) (Rs.175)</option>
-        <option value="235">Kantaraa-KANNADA(2022) (Rs.235)</option>
-      </select>
-    </div>
-    <div class="date-container">
-      <label style="font-size: 1em;">Pick a date:</label>
-      <input type="date" id="start" name="trip-start"
-       value="2023-03-03"
-       min="2023-03-03" max="2023-03-17">
-    </div>
-    <div class="time-container">
-      <label style="font-size: 1em;">Choose your timings:</label>
-      <select id="time" name ="time">
-          <option value="">--Select Timings--</option>
-          <option value="10:00:00">10:00 AM</option>
-          <option value="01:30:00">01:30 PM</option>
-          <option value="04:30:00">04:30 PM</option>
-          <option value="07:30:00">07:30 PM</option>
-      </select>
-    </div>
 
-    <ul class="showcase">
-      <li>
-        <div id="seat" class="seat"></div>
-        <small class="status" style="font-size: 1em;">N/A</small>
-      </li>
-      <li>
-        <div id="seat" class="seat selected"></div>
-        <small class="status" style="font-size: 1em;">Selected</small>
-      </li>
-      <li>
-        <div id="seat" class="seat occupied"></div>
-        <small class="status" style="font-size: 1em;">Occupied</small>
-      </li>
-    </ul>
-
-    <div class="container">
-      <div class="screen">
-        Your screen this way
-      </div>
-
-
-      <div class="seat-margin">
-      <div class="row">
-        <div id="seat[1][1]" class="seat"></div>
+    <div class="seat-margin">
+      <!-- <div class="row"> -->
+      <!-- <div id="seat[1][1]" class="seat"></div>
         <div id="seat[1][2]" class="seat"></div>
         <div id="seat[1][3]" class="seat"></div>
         <div id="seat[1][4]" class="seat"></div>
@@ -90,8 +90,8 @@
       </div>
       <div class="row">
         <div id="seat[2][1]" class="seat"></div>
-        <div id="seat[2][2]" class="seat"></div>
-        <div id="seat[2][3]" class="seat"></div>
+        <div id="seat[2][2]" class="seat occupied"></div>
+        <div id="seat[2][3]" class="seat occupied"></div>
         <div id="seat[2][4]" class="seat"></div>
         <div id="seat[2][5]" class="seat"></div>
         <div id="seat[2][6]" class="seat"></div>
@@ -187,133 +187,187 @@
         <div id="seat[6][16]" class="seat"></div>
         <div id="seat[6][17]" class="seat"></div>
         <div id="seat[6][18]" class="seat"></div>
-      </div>
+      </div> -->
+      <!-- </div> -->
     </div>
-    </div>
+
+
     <script>
+      const selectedSeatsArray = JSON.parse(localStorage.getItem("selectedSeats")) || []; // if there is no selected seats in local storage, then it will be an empty array
+
+      const rows = 6;
+      const seatsPerRow = 18;
+
+      const seatMargin = document.querySelector('.seat-margin');
+
+      for (let i = 1; i <= rows; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+
+        for (let j = 1; j <= seatsPerRow; j++) {
+          const seat = document.createElement('div');
+          seat.classList.add('seat');
+          seat.setAttribute('id', `seat[${i}][${j}]`);
+
+          if (selectedSeatsArray.includes(`seat[${i}][${j}]`)) {
+            seat.classList.add('occupied');
+          }
+
+          row.appendChild(seat);
+        }
+
+        seatMargin.appendChild(row);
+      }
+
+    </script>
+
+
+
+
+    <script>
+
       const selectDate = document.getElementById('date');
-      selectDate.addEventListener('change', function() {
-          const selectedDate = selectDate.value;
-          console.log('Selected date: ', selectedDate);
-          
+      selectDate.addEventListener('change', function () {
+        const selectedDate = selectDate.value;
+        console.log('Selected date: ', selectedDate);
+
       });
-  </script>
-    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px">
-      You have selected <span id="count">0</span> seats for a price of Rs.<span
-        id="total"
-        >0</span>
+    </script>
+
+    <!--Added some extra space and aligned to center. -->
+    <p></p>
+    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px;text-align: center;">
+      You have selected <span id="count">0</span> seats for a price of Rs.<span id="total">0</span>
     </p>
 
     <div class="btns">
       <a>
-      <button onclick="ticketBooked()" class="btn-home">
-        Book
-      </button>
+        <button onclick="ticketBooked()" class="btn-home">
+          Book
+        </button>
       </a>
 
-    <a href="./index.html">
-      <button class="btn-home">
-        Home
-      </button>
-    </a>
-  </div>
-  
-  <script>
-    function ticketBooked(){
-      
-      if(confirm("Do you want to continue with booking the tickets?")) 
-      {
-        window.location.href = "./ticketbooked.html"
-      }
-      else{
-        window.location.href="./booking.html"
-      }
-    }
-  </script>
-    
+      <a href="./index.html">
+        <button class="btn-home">
+          Home
+        </button>
+      </a>
+    </div>
 
     <script>
-     
-      var count=0;
-      var seats=document.getElementsByClassName("seat");
-      for(var i=0;i<seats.length;i++){
-        var item=seats[i];
-        
-        item.addEventListener("click",(event)=>{
+      function ticketBooked() {
+
+        if (confirm("Do you want to continue with booking the tickets?")) {
+          window.location.href = "./ticketbooked.html"
+
+          // Retrieve existing selected seats array from local storage, or create an empty array if it doesn't exist.
+          var existingSelectedSeatsArray = JSON.parse(localStorage.getItem("selectedSeats")) || [];
+
+          // Get newly selected seats.
+          var selectedSeats = document.getElementsByClassName("selected");
+          var selectedSeatsArray = [];
+          for (var i = 0; i < selectedSeats.length; i++) {
+            selectedSeatsArray.push(selectedSeats[i].id);
+          }
+
+          // Combine existing and new selected seats arrays.
+          var updatedSelectedSeatsArray = existingSelectedSeatsArray.concat(selectedSeatsArray);
+
+          // Store updated selected seats array in local storage.
+          localStorage.setItem("selectedSeats", JSON.stringify(updatedSelectedSeatsArray));
+
+
+        }
+
+        else {
+          window.location.href = "./booking.html"
+        }
+      }
+    </script>
+
+
+    <script>
+
+      var count = 0;
+      var seats = document.getElementsByClassName("seat");
+      for (var i = 0; i < seats.length; i++) {
+        var item = seats[i];
+
+        item.addEventListener("click", (event) => {
           /*event.target.classList.toggle('selected');*/
-          var price= document.getElementById("movie").value;
-          
-          if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
-          count++;
-          var total=count*price;
-          event.target.classList.toggle('selected');
-          document.getElementById("count").innerText=count;
-          document.getElementById("total").innerText=total;
+          var price = document.getElementById("movie").value;
+
+          if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected')) {
+            count++;
+            var total = count * price;
+            event.target.classList.toggle('selected');
+            document.getElementById("count").innerText = count;
+            document.getElementById("total").innerText = total;
           }
           else if (!event.target.classList.contains('occupied') && event.target.classList.contains('selected')) {
-           
+
             count--;
-          var total=count*price;
-          event.target.classList.toggle('selected');
-          document.getElementById("count").innerText=count;
-          document.getElementById("total").innerText=total;
-          
+            var total = count * price;
+            event.target.classList.toggle('selected');
+            document.getElementById("count").innerText = count;
+            document.getElementById("total").innerText = total;
+
           }
           else {
-            alert("Your Selected seat is already occupied! Please try another seat" );
+            alert("Your Selected seat is already occupied! Please try another seat");
           }
-          
-          
-          
-          
+
+
+
+
         })
       }
     </script>
     <script>
       // Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem('selectedMovieIndex', movieIndex);
-  localStorage.setItem('selectedMoviePrice', moviePrice);
-}
-
-// update total and count
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll('.row .seat.selected');
-
-  const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
-
-  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
-
-  //copy selected seats into arr
-  // map through array
-  //return new array of indexes
-
-  const selectedSeatsCount = selectedSeats.length;
-
-  count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
-}
-
-// get data from localstorage and populate ui
-function populateUI() {
-  const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
-  if (selectedSeats !== null && selectedSeats.length > 0) {
-    seats.forEach((seat, index) => {
-      if (selectedSeats.indexOf(index) > -1) {
-        seat.classList.add('selected');
+      function setMovieData(movieIndex, moviePrice) {
+        localStorage.setItem('selectedMovieIndex', movieIndex);
+        localStorage.setItem('selectedMoviePrice', moviePrice);
       }
-    });
-  }
 
-  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+      // update total and count
+      function updateSelectedCount() {
+        const selectedSeats = document.querySelectorAll('.row .seat.selected');
 
-  if (selectedMovieIndex !== null) {
-    movieSelect.selectedIndex = selectedMovieIndex;
-  }
-}
+        const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+
+        localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
+        //copy selected seats into arr
+        // map through array
+        //return new array of indexes
+
+        const selectedSeatsCount = selectedSeats.length;
+
+        count.innerText = selectedSeatsCount;
+        total.innerText = selectedSeatsCount * ticketPrice;
+      }
+
+      // get data from localstorage and populate ui
+      function populateUI() {
+        const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+        if (selectedSeats !== null && selectedSeats.length > 0) {
+          seats.forEach((seat, index) => {
+            if (selectedSeats.indexOf(index) > -1) {
+              seat.classList.add('selected');
+            }
+          });
+        }
+
+        const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+
+        if (selectedMovieIndex !== null) {
+          movieSelect.selectedIndex = selectedMovieIndex;
+        }
+      }
     </script>
-  </body>
+</body>
+
 </html>
 
 <php?
-
