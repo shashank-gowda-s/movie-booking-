@@ -68,8 +68,8 @@
 
 
       <div class="seat-margin">
-      <div class="row">
-        <div id="seat[1][1]" class="seat"></div>
+      <!-- <div class="row"> -->
+        <!-- <div id="seat[1][1]" class="seat"></div>
         <div id="seat[1][2]" class="seat"></div>
         <div id="seat[1][3]" class="seat"></div>
         <div id="seat[1][4]" class="seat"></div>
@@ -90,8 +90,8 @@
       </div>
       <div class="row">
         <div id="seat[2][1]" class="seat"></div>
-        <div id="seat[2][2]" class="seat"></div>
-        <div id="seat[2][3]" class="seat"></div>
+        <div id="seat[2][2]" class="seat occupied"></div>
+        <div id="seat[2][3]" class="seat occupied"></div>
         <div id="seat[2][4]" class="seat"></div>
         <div id="seat[2][5]" class="seat"></div>
         <div id="seat[2][6]" class="seat"></div>
@@ -187,10 +187,45 @@
         <div id="seat[6][16]" class="seat"></div>
         <div id="seat[6][17]" class="seat"></div>
         <div id="seat[6][18]" class="seat"></div>
-      </div>
-    </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
+    </div> 
+
+
+  <script>
+  const selectedSeatsArray = JSON.parse(localStorage.getItem("selectedSeats")) || []; // if there is no selected seats in local storage, then it will be an empty array
+
+  const rows = 6;
+  const seatsPerRow = 18;
+
+  const seatMargin = document.querySelector('.seat-margin');
+
+  for (let i = 1; i <= rows; i++) {
+    const row = document.createElement('div');
+    row.classList.add('row');
+
+    for (let j = 1; j <= seatsPerRow; j++) {
+      const seat = document.createElement('div');
+      seat.classList.add('seat');
+      seat.setAttribute('id', `seat[${i}][${j}]`);
+
+      if (selectedSeatsArray.includes(`seat[${i}][${j}]`)) {
+        seat.classList.add('occupied');
+      }
+
+      row.appendChild(seat);
+    }
+
+    seatMargin.appendChild(row);
+  }
+
+  </script>
+
+
+
+
     <script>
+
       const selectDate = document.getElementById('date');
       selectDate.addEventListener('change', function() {
           const selectedDate = selectDate.value;
@@ -198,7 +233,10 @@
           
       });
   </script>
-    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px">
+
+<!--Added some extra space and aligned to center. -->
+  <p></p> 
+    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px;text-align: center;">
       You have selected <span id="count">0</span> seats for a price of Rs.<span
         id="total"
         >0</span>
@@ -224,6 +262,15 @@
       if(confirm("Do you want to continue with booking the tickets?")) 
       {
         window.location.href = "./ticketbooked.html"
+
+        // Store selected seats.
+        var selectedSeats = document.getElementsByClassName("selected");
+        var selectedSeatsArray = [];
+        for (var i = 0; i < selectedSeats.length; i++) {
+          selectedSeatsArray.push(selectedSeats[i].id);
+        }
+        localStorage.setItem("selectedSeats", JSON.stringify(selectedSeatsArray));
+      
       }
       else{
         window.location.href="./booking.html"
